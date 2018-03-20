@@ -8,3 +8,4 @@ from .exercise import Exercise
 from .nssuser_exercise import NssUserExercise
 from .nssuser_badge import NssUserBadge
 from .treehouse_badge import TreehouseBadge
+from .prework_points import PreworkPoints
