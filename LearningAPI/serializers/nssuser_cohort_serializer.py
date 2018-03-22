@@ -1,8 +1,8 @@
 from rest_framework import serializers
-from LearningAPI.models import UserCohort
+from LearningAPI.models import NssUserCohort
 
 
-class UserCohortSerializer(serializers.HyperlinkedModelSerializer):
+class NssUserCohortSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model = UserCohort
+        model = NssUserCohort
         fields = '__all__'
