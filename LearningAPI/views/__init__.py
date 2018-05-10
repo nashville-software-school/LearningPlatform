@@ -9,6 +9,6 @@ from .exercise_view import ExerciseViewSet
 from .nssuser_exercise_view import NssUserExerciseViewSet
 from .nssuser_badge_view import NssUserBadgeViewSet
 from .treehouse_badge_view import TreehouseBadgeViewSet
-from .nssuser_badge_view import NssUserBadgeViewSet
 from .prework_points_view import PreworkPointsViewSet
 from .user_view import UserViewSet
+from .register_view import *
