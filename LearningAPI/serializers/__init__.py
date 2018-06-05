@@ -11,3 +11,4 @@ from .nssuser_exercise_serializer import NssUserExerciseSerializer
 from .treehouse_badge_serializer import TreehouseBadgeSerializer
 from .nssuser_badge_serializer import NssUserBadgeSerializer
 from .prework_points_serializer import PreworkPointsSerializer
+from .lead_status_serializer import LeadStatusSerializer
