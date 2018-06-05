@@ -33,6 +33,7 @@ router.register(r'preworkpoints', views.PreworkPointsViewSet)
 router.register(r'treehousebadges', views.TreehouseBadgeViewSet)
 router.register(r'nssuserbadges', views.NssUserBadgeViewSet)
 router.register(r'users', views.UserViewSet)
+router.register(r'leads', views.LeadViewSet)
 
 
 urlpatterns = [

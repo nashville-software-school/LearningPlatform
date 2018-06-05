@@ -1,6 +1,6 @@
 from rest_framework import viewsets
 from LearningAPI.serializers import LeadSerializer
-from django.contrib.auth.models import Lead
+from LearningAPI.models import Lead
 
 
 class LeadViewSet(viewsets.ModelViewSet):

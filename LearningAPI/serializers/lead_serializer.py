@@ -1,5 +1,5 @@
-from django.contrib.auth.models import Lead
 from rest_framework import serializers
+from LearningAPI.models import Lead
 
 
 class LeadSerializer(serializers.HyperlinkedModelSerializer):
