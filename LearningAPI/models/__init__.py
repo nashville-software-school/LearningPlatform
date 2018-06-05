@@ -9,3 +9,4 @@ from .nssuser_exercise import NssUserExercise
 from .treehouse_badge import TreehouseBadge
 from .nssuser_badge import NssUserBadge
 from .prework_points import PreworkPoints
+from .contact import Contact
