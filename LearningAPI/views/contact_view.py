@@ -1,4 +1,5 @@
 from rest_framework import viewsets
+from LearningAPI.models import Contact
 from LearningAPI.serializers import ContactSerializer
 
 
