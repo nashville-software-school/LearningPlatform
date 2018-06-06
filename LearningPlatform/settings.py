@@ -122,5 +122,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 FIXTURE_DIRS = (
-   '../LearningAPI/fixtures/lead_generation_types',
+   '../LearningAPI/fixtures',
 )
