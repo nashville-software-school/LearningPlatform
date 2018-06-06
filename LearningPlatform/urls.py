@@ -34,6 +34,8 @@ router.register(r'treehousebadges', views.TreehouseBadgeViewSet)
 router.register(r'nssuserbadges', views.NssUserBadgeViewSet)
 router.register(r'users', views.UserViewSet)
 router.register(r'leads', views.LeadViewSet)
+router.register(r'companies', views.CompanyViewSet)
+router.register(r'contacts', views.ContactViewSet)
 
 
 urlpatterns = [
