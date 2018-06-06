@@ -12,4 +12,5 @@ from .treehouse_badge_view import TreehouseBadgeViewSet
 from .nssuser_badge_view import NssUserBadgeViewSet
 from .prework_points_view import PreworkPointsViewSet
 from .user_view import UserViewSet
+from .company_view import CompanyViewSet
 from .contact_view import ContactViewSet
