@@ -13,3 +13,4 @@ from .nssuser_badge_serializer import NssUserBadgeSerializer
 from .prework_points_serializer import PreworkPointsSerializer
 from .company_serializer import CompanySerializer
 from .contact_serializer import ContactSerializer
+from .lead_generation_type_serializer import LeadGenerationTypeSerializer

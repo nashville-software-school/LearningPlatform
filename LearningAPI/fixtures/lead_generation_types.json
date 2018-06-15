@@ -1,0 +1,37 @@
+[
+  {
+    "model": "LearningAPI.leadgenerationtype",
+    "pk": 1,
+    "fields": {
+      "name": "Networking at NSS"
+    }
+  },
+  {
+    "model": "LearningAPI.leadgenerationtype",
+    "pk": 2,
+    "fields": {
+      "name": "Networking Prior to NSS"
+    }
+  },
+  {
+    "model": "LearningAPI.leadgenerationtype",
+    "pk": 3,
+    "fields": {
+      "name": "Submitted Application"
+    }
+  },
+  {
+    "model": "LearningAPI.leadgenerationtype",
+    "pk": 4,
+    "fields": {
+      "name": "Invited to Apply"
+    }
+  },
+  {
+    "model": "LearningAPI.leadgenerationtype",
+    "pk": 5,
+    "fields": {
+      "name": "Other"
+    }
+  }
+]
