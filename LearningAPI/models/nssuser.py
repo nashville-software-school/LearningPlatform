@@ -7,3 +7,6 @@ class NssUser(models.Model):
     slack_handle = models.CharField(max_length=55)
     github_handle = models.CharField(max_length=55)
     mentor = models.ForeignKey("NssUser", on_delete=models.DO_NOTHING, blank=True, null=True)
+    
+    def __str__(self):
+        return self.user.username
