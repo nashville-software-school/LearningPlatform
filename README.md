@@ -43,6 +43,7 @@ In the `LearningPlatform` directory, run the following command to apply the init
 
 ```sh
 python manage.py migrate
+python manage.py loaddata LearningAPI/fixtures/lead_generation_types.json
 ```
 
 ## Testing the Installation
