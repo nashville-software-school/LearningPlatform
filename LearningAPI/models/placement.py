@@ -1,4 +1,5 @@
 from django.db import models
+from . import NssUser, JobType, Company
 
 
 class Placement(models.Model):
