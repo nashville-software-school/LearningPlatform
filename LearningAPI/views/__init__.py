@@ -20,3 +20,4 @@ from .job_type_view import JobTypeViewSet
 from .placement_view import PlacementViewSet
 from .company_contact_view import CompanyContactViewSet
 from .placement_technology_view import PlacementTechnologyViewSet
+from .application_stage_type_view import ApplicationStageTypeViewSet

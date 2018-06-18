@@ -17,3 +17,5 @@ from .job_type import JobType
 from .placement import Placement
 from .company_contact import CompanyContact
 from .placement_technology import PlacementTechnology
+from .lead_generation_type import LeadGenerationType
+from .application_stage_type import ApplicationStageType
