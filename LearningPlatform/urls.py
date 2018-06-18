@@ -40,6 +40,7 @@ router.register(r'technologies', views.TechnologyViewSet)
 router.register(r'jobtypes', views.JobTypeViewSet)
 router.register(r'placements', views.PlacementViewSet)
 router.register(r'companycontacts', views.CompanyContactViewSet)
+router.register(r'placementtech', views.PlacementTechnologyViewSet)
 
 
 urlpatterns = [
