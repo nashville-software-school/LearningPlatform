@@ -1,6 +1,6 @@
 from rest_framework import viewsets
 from LearningAPI.serializers import JobTypeSerializer
-from LearningAPI.models import Exercise
+from LearningAPI.models import JobType
 
 
 class JobTypeViewSet(viewsets.ModelViewSet):
