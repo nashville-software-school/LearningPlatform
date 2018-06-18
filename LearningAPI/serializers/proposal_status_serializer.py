@@ -5,4 +5,4 @@ from LearningAPI.models import ProposalStatus
 class ProposalStatusSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = ProposalStatus
-        fields = ('url', 'status')
+        fields = '__all__'
