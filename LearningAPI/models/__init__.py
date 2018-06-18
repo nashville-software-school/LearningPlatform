@@ -16,3 +16,4 @@ from .technology import Technology
 from .job_type import JobType
 from .placement import Placement
 from .company_contact import CompanyContact
+from .placement_technology import PlacementTechnology
