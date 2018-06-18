@@ -12,3 +12,4 @@ from .prework_points import PreworkPoints
 from .company import Company
 from .contact import Contact
 from .lead_generation_type import LeadGenerationType
+from .application_stage_type import ApplicationStageType

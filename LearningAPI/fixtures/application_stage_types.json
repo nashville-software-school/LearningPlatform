@@ -1,0 +1,58 @@
+[
+  {
+    "model": "LearningAPI.applicationstagetype",
+    "pk": 1,
+    "fields": {
+      "name": "Application Submitted"
+    }
+  },
+  {
+    "model": "LearningAPI.applicationstagetype",
+    "pk": 2,
+    "fields": {
+      "name": "Phone Screen"
+    }
+  },
+  {
+    "model": "LearningAPI.applicationstagetype",
+    "pk": 3,
+    "fields": {
+      "name": "Phone Interview"
+    }
+  },
+  {
+    "model": "LearningAPI.applicationstagetype",
+    "pk": 4,
+    "fields": {
+      "name": "In-Person Interview"
+    }
+  },
+  {
+    "model": "LearningAPI.applicationstagetype",
+    "pk": 5,
+    "fields": {
+      "name": "Final Interview"
+    }
+  },
+  {
+    "model": "LearningAPI.applicationstagetype",
+    "pk": 6,
+    "fields": {
+      "name": "Rejected"
+    }
+  },
+  {
+    "model": "LearningAPI.applicationstagetype",
+    "pk": 7,
+    "fields": {
+      "name": "Offer Extended"
+    }
+  },
+  {
+    "model": "LearningAPI.applicationstagetype",
+    "pk": 8,
+    "fields": {
+      "name": "Hired"
+    }
+  }
+]
