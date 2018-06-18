@@ -14,3 +14,4 @@ from .contact import Contact
 from .lead_generation_type import LeadGenerationType
 from .technology import Technology
 from .job_type import JobType
+from .placement import Placement
