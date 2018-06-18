@@ -1,4 +1,5 @@
 from django.db import models
+from . import Contact, Company
 
 
 class CompanyContact(models.Model):
