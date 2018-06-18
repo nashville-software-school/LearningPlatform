@@ -36,6 +36,9 @@ router.register(r'users', views.UserViewSet)
 router.register(r'companies', views.CompanyViewSet)
 router.register(r'contacts', views.ContactViewSet)
 router.register(r'leadgentypes', views.LeadGenerationTypeViewSet)
+router.register(r'technologies', views.TechnologyViewSet)
+router.register(r'jobtypes', views.JobTypeViewSet)
+router.register(r'placements', views.PlacementViewSet)
 router.register(r'appstagetypes', views.ApplicationStageTypeViewSet)
 
 

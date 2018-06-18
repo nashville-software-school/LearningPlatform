@@ -5,4 +5,4 @@ from LearningAPI.models import Company
 class CompanySerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Company
-        fields = ('name', 'phone', 'address')
+        fields = '__all__'

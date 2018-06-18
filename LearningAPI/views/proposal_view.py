@@ -5,7 +5,7 @@ from LearningAPI.models import Proposal
 
 class ProposalViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows users to be viewed or edited.
+    API endpoint that allows proposals to be viewed or edited.
     """
     queryset = Proposal.objects.all()
     serializer_class = ProposalSerializer
