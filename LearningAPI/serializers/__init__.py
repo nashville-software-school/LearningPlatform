@@ -18,3 +18,4 @@ from .technology_serializer import TechnologySerializer
 from .job_type_serializer import JobTypeSerializer
 from .placement_serializer import PlacementSerializer
 from .company_contact_serializer import CompanyContactSerializer
+from .placement_technology_serializer import PlacementTechnologySerializer
