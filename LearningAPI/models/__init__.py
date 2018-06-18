@@ -9,8 +9,8 @@ from .nssuser_exercise import NssUserExercise
 from .treehouse_badge import TreehouseBadge
 from .nssuser_badge import NssUserBadge
 from .prework_points import PreworkPoints
-from .company import Company
 from .contact import Contact
+from .company import Company
 from .lead_generation_type import LeadGenerationType
 from .technology import Technology
 from .job_type import JobType
