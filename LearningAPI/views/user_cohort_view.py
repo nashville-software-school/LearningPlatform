@@ -5,7 +5,7 @@ from LearningAPI.models import UserCohort
 
 class UserCohortViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows users to be viewed or edited.
+    API endpoint that allows user-cohort relationships to be viewed or edited.
     """
     queryset = UserCohort.objects.all()
     serializer_class = UserCohortSerializer

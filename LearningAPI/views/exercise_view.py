@@ -5,7 +5,7 @@ from LearningAPI.models import Exercise
 
 class ExerciseViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows users to be viewed or edited.
+    API endpoint that allows exercises to be viewed or edited.
     """
     queryset = Exercise.objects.all()
     serializer_class = ExerciseSerializer

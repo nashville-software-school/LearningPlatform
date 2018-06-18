@@ -5,7 +5,7 @@ from LearningAPI.models import TreehouseBadge
 
 class TreehouseBadgeViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows users to be viewed or edited.
+    API endpoint that allows Treehouse badges to be viewed or edited.
     """
     queryset = TreehouseBadge.objects.all()
     serializer_class = TreehouseBadgeSerializer
