@@ -1,5 +1,5 @@
 from django.db import models
-from . import NssUser, JobType, Company
+from . import NssUser, JobType, Company, Technology
 
 
 class Placement(models.Model):
@@ -8,3 +8,4 @@ class Placement(models.Model):
     job_type_id = models.ForeignKey(JobType, on_delete=models.DO_NOTHING)
     salary = models.IntegerField()
     start_date = models.DateField(max_length=55)
+    technologies = models.ManyToManyField(Technology)

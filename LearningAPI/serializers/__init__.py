@@ -17,5 +17,4 @@ from .lead_generation_type_serializer import LeadGenerationTypeSerializer
 from .technology_serializer import TechnologySerializer
 from .job_type_serializer import JobTypeSerializer
 from .placement_serializer import PlacementSerializer
-from .placement_technology_serializer import PlacementTechnologySerializer
 from .application_stage_type_serializer import ApplicationStageTypeSerializer
