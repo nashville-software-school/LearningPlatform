@@ -18,6 +18,5 @@ from .lead_generation_type_view import LeadGenerationTypeViewSet
 from .technology_view import TechnologyViewSet
 from .job_type_view import JobTypeViewSet
 from .placement_view import PlacementViewSet
-from .company_contact_view import CompanyContactViewSet
 from .placement_technology_view import PlacementTechnologyViewSet
 from .application_stage_type_view import ApplicationStageTypeViewSet
