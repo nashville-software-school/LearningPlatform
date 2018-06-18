@@ -17,3 +17,4 @@ from .contact_view import ContactViewSet
 from .lead_generation_type_view import LeadGenerationTypeViewSet
 from .technology_view import TechnologyViewSet
 from .job_type_view import JobTypeViewSet
+from .placement_view import PlacementViewSet
