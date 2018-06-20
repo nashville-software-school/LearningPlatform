@@ -18,3 +18,4 @@ from .technology_serializer import TechnologySerializer
 from .job_type_serializer import JobTypeSerializer
 from .placement_serializer import PlacementSerializer
 from .application_stage_type_serializer import ApplicationStageTypeSerializer
+from .application_stage_serializer import ApplicationStage
