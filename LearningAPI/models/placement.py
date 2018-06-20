@@ -7,5 +7,5 @@ class Placement(models.Model):
     company_id = models.ForeignKey(Company, on_delete=models.DO_NOTHING)
     job_type_id = models.ForeignKey(JobType, on_delete=models.DO_NOTHING)
     salary = models.IntegerField()
-    start_date = models.DateField(max_length=55)
+    start_date = models.DateField()
     technologies = models.ManyToManyField(Technology)
