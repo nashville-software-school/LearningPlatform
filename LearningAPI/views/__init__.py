@@ -19,3 +19,4 @@ from .technology_view import TechnologyViewSet
 from .job_type_view import JobTypeViewSet
 from .placement_view import PlacementViewSet
 from .application_stage_type_view import ApplicationStageTypeViewSet
+from .application_stage_view import ApplicationStageViewSet

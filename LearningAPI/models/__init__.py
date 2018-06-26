@@ -17,3 +17,4 @@ from .job_type import JobType
 from .placement import Placement
 from .lead_generation_type import LeadGenerationType
 from .application_stage_type import ApplicationStageType
+from .application_stage import ApplicationStage
