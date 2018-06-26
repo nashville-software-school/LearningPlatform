@@ -3,11 +3,11 @@ from . import NssUser, ApplicationStageType, Contact, Company, LeadGenerationTyp
 
 
 class ApplicationStage(models.Model):
-    nss_user_id = models.ForeignKey(NssUser, on_delete=models.DO_NOTHING)
-    application_stage_type_id = models.ForeignKey(ApplicationStageType, on_delete=models.DO_NOTHING)
-    company_id = models.ForeignKey(Company, on_delete=models.DO_NOTHING)
-    contact_id = models.ForeignKey(Contact, on_delete=models.DO_NOTHING)
-    lead_generation_type_id = models.ForeignKey(LeadGenerationType, on_delete=models.DO_NOTHING)
+    nss_user = models.ForeignKey(NssUser, on_delete=models.DO_NOTHING)
+    application_stage_type = models.ForeignKey(ApplicationStageType, on_delete=models.DO_NOTHING)
+    company = models.ForeignKey(Company, on_delete=models.DO_NOTHING)
+    contact = models.ForeignKey(Contact, on_delete=models.DO_NOTHING)
+    lead_generation_type = models.ForeignKey(LeadGenerationType, on_delete=models.DO_NOTHING)
     date = models.DateField()
     notes = models.CharField(max_length=55)
 
