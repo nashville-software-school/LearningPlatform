@@ -41,10 +41,12 @@ router.register(r'jobtypes', views.JobTypeViewSet)
 router.register(r'placements', views.PlacementViewSet)
 router.register(r'appstagetypes', views.ApplicationStageTypeViewSet)
 router.register(r'appstages', views.ApplicationStageViewSet)
+router.register(r'students', views.StudentViewSet)
+router.register(r'instructors', views.InstructorViewSet)
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^', include(router.urls)),
-    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    path('api/v1/', include(router.urls)),
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]

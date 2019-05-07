@@ -11,10 +11,12 @@ from .nssuser_badge import NssUserBadge
 from .prework_points import PreworkPoints
 from .contact import Contact
 from .company import Company
-from .lead_generation_type import LeadGenerationType
 from .technology import Technology
 from .job_type import JobType
 from .placement import Placement
 from .lead_generation_type import LeadGenerationType
 from .application_stage_type import ApplicationStageType
 from .application_stage import ApplicationStage
+from .student import Student
+from .instructor import Instructor
+from .instructor_cohort import InstructorCohort

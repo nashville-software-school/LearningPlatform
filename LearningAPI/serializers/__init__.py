@@ -19,3 +19,5 @@ from .job_type_serializer import JobTypeSerializer
 from .placement_serializer import PlacementSerializer
 from .application_stage_type_serializer import ApplicationStageTypeSerializer
 from .application_stage_serializer import ApplicationStageSerializer
+from .instructor_serializer import InstructorSerializer
+from .student_serializer import StudentSerializer
