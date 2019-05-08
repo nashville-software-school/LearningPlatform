@@ -2,6 +2,8 @@ from django.db import models
 from django.core.validators import RegexValidator
 
 class Student(models.Model):
+    """Represents an NSS student for any type of cohort"""
+
     # regex should match the following: (555) 444-6789, 555-444-6789, 555.444.6789, 555 444 6789
     phone_regex = RegexValidator(regex=r'\(?\d+\)?[-.\s]?\d+[-.\s]?\d+')
 

@@ -1,9 +1,7 @@
 from .nssuser import NssUser
-from .cohort import Cohort
 from .capstone_type import CapstoneType
 from .proposal_status import ProposalStatus
 from .proposal import Proposal
-from .nssuser_cohort import NssUserCohort
 from .exercise import Exercise
 from .nssuser_exercise import NssUserExercise
 from .treehouse_badge import TreehouseBadge
@@ -20,3 +18,5 @@ from .application_stage import ApplicationStage
 from .student import Student
 from .instructor import Instructor
 from .instructor_cohort import InstructorCohort
+from .cohort import Cohort
+from .nssuser_cohort import NssUserCohort

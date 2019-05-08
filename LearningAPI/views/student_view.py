@@ -4,7 +4,7 @@ from LearningAPI.models import Student
 
 class StudentViewSet(viewsets.ModelViewSet):
     """
-    This viewset automagically provides 'list', 'create', 'retrieve', 'update', and 'destroy' actions.
+    API endpoint that automagically provides 'list', 'create', 'retrieve', 'update', and 'destroy' actions.
     """
     queryset = Student.objects.all()
     serializer_class = StudentSerializer

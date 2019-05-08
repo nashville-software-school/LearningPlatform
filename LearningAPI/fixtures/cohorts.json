@@ -1,0 +1,42 @@
+[
+  {
+    "model": "LearningAPI.cohort",
+    "pk": 1,
+    "fields": {
+      "name": "Cohort 29",
+      "slack_channel": "day-cohort-29",
+      "start_date": "2018-11-16",
+      "end_date": "2019-05-16"
+    }
+  },
+  {
+    "model": "LearningAPI.cohort",
+    "pk": 2,
+    "fields": {
+      "name": "Cohort 30",
+      "slack_channel": "day-cohort-30",
+      "start_date": "2019-01-07",
+      "end_date": "2019-06-07"
+    }
+  },
+  {
+    "model": "LearningAPI.cohort",
+    "pk": 3,
+    "fields": {
+      "name": "Cohort 31",
+      "slack_channel": "day-cohort-31",
+      "start_date": "2019-02-11",
+      "end_date": "2019-08-16"
+    }
+  },
+  {
+    "model": "LearningAPI.cohort",
+    "pk": 4,
+    "fields": {
+      "name": "Cohort 32",
+      "slack_channel": "day-cohort-32",
+      "start_date": "2019-04-08",
+      "end_date": "2019-10-18"
+    }
+  }
+]
