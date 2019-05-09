@@ -21,3 +21,4 @@ from .application_stage_type_serializer import ApplicationStageTypeSerializer
 from .application_stage_serializer import ApplicationStageSerializer
 from .instructor_serializer import InstructorSerializer
 from .student_serializer import StudentSerializer
+from .cohort_type_serializer import CohortTypeSerializer

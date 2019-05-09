@@ -22,3 +22,4 @@ from .application_stage_type_view import ApplicationStageTypeViewSet
 from .application_stage_view import ApplicationStageViewSet
 from .student_view import StudentViewSet
 from .instructor_view import InstructorViewSet
+from .cohort_type_view import CohortTypeViewSet

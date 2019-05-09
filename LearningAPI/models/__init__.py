@@ -21,4 +21,5 @@ from .instructor import Instructor
 from .instructor_cohort import InstructorCohort
 from .student_cohort import StudentCohort
 from .cohort import Cohort
+from .cohort_type import CohortType
 from .nssuser_cohort import NssUserCohort
