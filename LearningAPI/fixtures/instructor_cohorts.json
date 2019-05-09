@@ -1,0 +1,34 @@
+[
+  {
+    "model": "LearningAPI.instructorcohort",
+    "pk": 1,
+    "fields": {
+      "instructor": 5,
+      "cohort": 1
+    }
+  },
+  {
+    "model": "LearningAPI.instructorcohort",
+    "pk": 2,
+    "fields": {
+      "instructor": 2,
+      "cohort": 2
+    }
+  },
+  {
+    "model": "LearningAPI.instructorcohort",
+    "pk": 3,
+    "fields": {
+      "instructor": 3,
+      "cohort": 3
+    }
+  },
+  {
+    "model": "LearningAPI.instructorcohort",
+    "pk": 4,
+    "fields": {
+      "instructor": 4,
+      "cohort": 4
+    }
+  }
+]

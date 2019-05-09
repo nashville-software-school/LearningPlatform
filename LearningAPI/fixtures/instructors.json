@@ -1,0 +1,43 @@
+[
+  {
+    "model": "LearningAPI.Instructor",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "is_awesome": 1
+    }
+  },
+  {
+    "model": "LearningAPI.Instructor",
+    "pk": 2,
+    "fields": {
+      "user": 2,
+      "is_awesome": 1
+    }
+  },
+  {
+    "model": "LearningAPI.Instructor",
+    "pk": 3,
+    "fields": {
+      "user": 3,
+      "is_awesome": 1
+    }
+  },
+  {
+    "model": "LearningAPI.Instructor",
+    "pk": 4,
+    "fields": {
+      "user": 4,
+      "is_awesome": 1
+    }
+
+  },
+  {
+    "model": "LearningAPI.Instructor",
+    "pk": 5,
+    "fields": {
+      "user": 5,
+      "is_awesome": 1
+    }
+  }
+]

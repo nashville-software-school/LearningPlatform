@@ -1,0 +1,57 @@
+[
+  {
+    "model": "LearningAPI.Student",
+    "pk": 1,
+    "fields": {
+      "first_name": "Bubba",
+      "last_name": "Sparkle",
+      "email": "bub@b.com",
+      "phone_number": "555-123-1234",
+      "student_number": 12345
+    }
+  },
+  {
+    "model": "LearningAPI.Student",
+    "pk": 2,
+    "fields": {
+      "first_name": "Linda",
+      "last_name": "Fromage",
+      "email": "l@l.com",
+      "phone_number": "555-124-1234",
+      "student_number": 12346
+    }
+  },
+  {
+    "model": "LearningAPI.Student",
+    "pk": 3,
+    "fields": {
+      "first_name": "Frankie",
+      "last_name": "Hamerwich",
+      "email": "f@f.com",
+      "phone_number": "555-125-1234",
+      "student_number": 12348
+    }
+  },
+  {
+    "model": "LearningAPI.Student",
+    "pk": 4,
+    "fields": {
+      "first_name": "Cynthia",
+      "last_name": "Boggle",
+      "email": "cy@cy.com",
+      "phone_number": "555-126-1234",
+      "student_number": 12340
+    }
+  },
+  {
+    "model": "LearningAPI.Student",
+    "pk": 5,
+    "fields": {
+      "first_name": "Farlo",
+      "last_name": "Jankyheimer",
+      "email": "f@f.com",
+      "phone_number": "555-120-1234",
+      "student_number": 12342
+    }
+  }
+]
