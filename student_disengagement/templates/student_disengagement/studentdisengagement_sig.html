@@ -1,0 +1,64 @@
+
+{% block extrahead  %}
+<style>
+  /* For pdf sizing */
+  @page {
+    size: A4;
+    margin-top: 5mm;
+    margin-left: 10mm;
+    margin-right: 30mm;
+  }
+
+  /* Numbers weren't displaying on Mac. Problem with emoji fonts!? Removing references to them here fixes it. Damn */
+  /* https://stackoverflow.com/questions/54700953/only-numbers-are-missing-weasyprint-pdf */
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Segoe UI Symbol";
+  }
+
+  h2 {
+    font-size: 2.25em;
+  }
+
+  h3 {
+    font-size: 2em;
+  }
+
+  .signature_section td {
+    padding: 20px;
+  }
+
+  .signature_line {
+    padding-top: 30px;
+  }
+</style>
+{% endblock %}
+{% load static %}
+<section class="signature_view_container printSection">
+    <img src="https://firebasestorage.googleapis.com/v0/b/memory-game-de323.appspot.com/o/images%2Fnss_logo.png?alt=media" alt="NSS logo" height="100" width="100">
+    <p>{% now "F jS, Y" %}</p>
+    {% include './studentdisengagement_partial.html' %}
+    <p>
+      I have reviewed the information above and attest that it is accurate.
+      {% if de.intended_return_date %}
+      I agree to the conditions for return. I understand that if the conditions are not met, Nashville Software School reserves the right to deny me readmission (or something like that)
+      {% endif %}
+    </p>
+    <section class="signature_section">
+      <table>
+        <tr>
+          <td>
+            <div class="signature_item">
+              <p>student signature</p>
+              <p class="signature_line">________________________________________<br>{{de.student.full_name}}</p>
+            </div>
+          </td>
+          <td>
+            <div class="signature_item">
+              <p>Instructor</p>
+              <p class="signature_line">________________________________________<br>{{de.instructor.full_name}}</p>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </section>
+  </section>

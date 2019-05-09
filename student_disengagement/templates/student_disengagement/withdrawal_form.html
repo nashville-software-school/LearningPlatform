@@ -1,0 +1,23 @@
+{% extends 'student_disengagement/base.html' %}
+{% load crispy_forms_tags %}
+{% load bootstrap4 %}
+{% load static %}
+
+{% block extrahead %}
+{{ form.media }}
+{% endblock %}
+
+{% block content %}
+{% include './navbar.html' %}
+<div class="row justify-content-center">
+  <div class="col-8">
+    <h1 class="mt-2">Student Disengagement Form</h1>
+    <form method="post">
+      {% csrf_token %}
+      {{ form|crispy }}
+      <button type="submit" class="btn btn-success">Save</button>
+    </form>
+  </div>
+</div>
+<script src="{% static 'student_disengagement/js/form.js' %}"></script>
+{% endblock %}

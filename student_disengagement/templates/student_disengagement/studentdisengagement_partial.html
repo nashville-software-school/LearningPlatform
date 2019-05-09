@@ -1,0 +1,21 @@
+<h2>Disengagement Detail</h2>
+<h3>for {{de.student.full_name}}</h3>
+<hr>
+<div class="row">
+  <div class="col-12">
+    <p><strong>student's cohort at time of disengagement:</strong> {{de.cohort_type}}</p>
+    <p><strong>disengagement type:</strong> {{de.disengagement_type}}</p>
+    <p><strong>reason for disengagement:</strong> {% firstof de.reason de.disengagement_detail %}</strong></p>
+    <p><strong>created on:</strong> {{de.created}}</p>
+    <p><strong>effective date:</strong> {{de.effective_date}}</p>
+    <p><strong>last date of attendance:</strong> {{de.last_attendance_date}}</p>
+    <p><strong>instructor at time of disengagement:</strong> {{de.instructor.full_name }}</p>
+    {% if de.intended_return_date %}
+      <p><strong>intended return date:</strong> {{ intended_return_date }}</p>
+      <p><strong>cohort to join:</strong> {{ de.future_cohort }}</p>
+    {% endif %}
+    {% if de.return_conditions %}
+    <p><strong>conditions for return:</strong> {{ de.return_conditions }}</p>
+    {% endif %}
+  </div>
+</div>

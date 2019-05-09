@@ -1,0 +1,41 @@
+{% extends 'student_disengagement/base.html' %}
+{% load static %}
+{% block content %}
+{% include './navbar.html' %}
+{% include './studentdisengagement_partial.html' %}
+<div class="row">
+  <div class="col-12">
+    <a class="btn btn-primary" role="button" href="{% url 'student_disengagement:disengagement_edit' pk=de.id %}">edit details</a>
+    {% comment Don't allow formatting for student signature if student is deceased %}{% endcomment %}
+    {% if de.reason.id != 4 %}
+      <a class="btn btn-primary" role="button" data-toggle="modal" data-target="#signature_modal">format for signatures</a>
+    {% endif %}
+  </div>
+</div>
+
+<!-- printing format modal -->
+<div class="modal fade" id="signature_modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Be sure to review the information before printing or generating a pdf for signatures </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      {% include './studentdisengagement_sig.html' %}
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="print_agreement" class="btn btn-primary">Print</button>
+        <form action="{% url 'student_disengagement:disengagement_pdf' pk=de.id %}" method="post">
+          {% csrf_token %}
+          <button type="submit" id="pdf_agreement" class="btn btn-primary">Create PDF</button>
+        </form>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="{% static 'student_disengagement/js/main.js' %}"></script>
+{% endblock %}
