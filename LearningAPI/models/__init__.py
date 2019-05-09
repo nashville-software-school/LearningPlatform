@@ -1,3 +1,4 @@
+from .common_props import CommonProps
 from .nssuser import NssUser
 from .capstone_type import CapstoneType
 from .proposal_status import ProposalStatus
@@ -18,5 +19,6 @@ from .application_stage import ApplicationStage
 from .student import Student
 from .instructor import Instructor
 from .instructor_cohort import InstructorCohort
+from .student_cohort import StudentCohort
 from .cohort import Cohort
 from .nssuser_cohort import NssUserCohort

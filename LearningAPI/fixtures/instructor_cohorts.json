@@ -11,7 +11,7 @@
     "model": "LearningAPI.instructorcohort",
     "pk": 2,
     "fields": {
-      "instructor": 1,
+      "instructor": 2,
       "cohort": 2
     }
   },
