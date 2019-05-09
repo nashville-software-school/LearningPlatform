@@ -1,0 +1,34 @@
+[
+  {
+    "model": "LearningAPI.studentcohort",
+    "pk": 1,
+    "fields": {
+      "student": 5,
+      "cohort": 1
+    }
+  },
+  {
+    "model": "LearningAPI.studentcohort",
+    "pk": 2,
+    "fields": {
+      "student": 2,
+      "cohort": 1
+    }
+  },
+  {
+    "model": "LearningAPI.studentcohort",
+    "pk": 3,
+    "fields": {
+      "student": 3,
+      "cohort": 1
+    }
+  },
+  {
+    "model": "LearningAPI.studentcohort",
+    "pk": 4,
+    "fields": {
+      "student": 4,
+      "cohort": 3
+    }
+  }
+]
