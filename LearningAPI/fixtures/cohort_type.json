@@ -1,0 +1,44 @@
+[
+  {
+    "model": "LearningAPI.cohorttype",
+    "pk": 1,
+    "fields": {
+      "type": "Web Development: Full Time Front End"
+    }
+  },
+  {
+    "model": "LearningAPI.cohorttype",
+    "pk": 2,
+    "fields": {
+      "type": "Web Development: Full Time Back End"
+    }
+  },
+  {
+    "model": "LearningAPI.cohorttype",
+    "pk": 3,
+    "fields": {
+      "type": "Web Development: Part Time Front End"
+    }
+  },
+  {
+    "model": "LearningAPI.cohorttype",
+    "pk": 4,
+    "fields": {
+      "type": "Web Development: Part Time Back End"
+    }
+  },
+  {
+    "model": "LearningAPI.cohorttype",
+    "pk": 5,
+    "fields": {
+      "type": "Data Science: Part Time"
+    }
+  },
+  {
+    "model": "LearningAPI.cohorttype",
+    "pk": 6,
+    "fields": {
+      "type": "Data Analytics: Part Time"
+    }
+  }
+]
