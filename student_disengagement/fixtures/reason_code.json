@@ -1,0 +1,66 @@
+[
+  {
+    "model": "student_disengagement.reasoncode",
+    "pk": 1,
+    "fields": {
+      "thec_code": 0,
+      "title": "No special circumstances"
+    }
+  },
+  {
+    "model": "student_disengagement.reasoncode",
+    "pk": 2,
+    "fields": {
+      "thec_code": 1,
+      "title": "Health"
+    }
+  },
+  {
+    "model": "student_disengagement.reasoncode",
+    "pk": 3,
+    "fields": {
+      "thec_code": 2,
+      "title": "Family emergency"
+    }
+  },
+  {
+    "model": "student_disengagement.reasoncode",
+    "pk": 4,
+    "fields": {
+      "thec_code": 3,
+      "title": "Death"
+    }
+  },
+  {
+    "model": "student_disengagement.reasoncode",
+    "pk": 5,
+    "fields": {
+      "thec_code": 4,
+      "title": "Incarceration"
+    }
+  },
+  {
+    "model": "student_disengagement.reasoncode",
+    "pk": 6,
+    "fields": {
+      "thec_code": 5,
+      "title": "Full-time military service"
+    }
+  },
+  {
+    "model": "student_disengagement.reasoncode",
+    "pk": 7,
+    "fields": {
+      "thec_code": 6,
+      "title": "Job relocated/transferred"
+    }
+  },
+  {
+    "model": "student_disengagement.reasoncode",
+    "pk": 8,
+    "fields": {
+      "thec_code": 7,
+      "title": "Transferred cohorts"
+    }
+  }
+]
