@@ -5,11 +5,14 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_http_methods
 from django.contrib.auth import authenticate, login, logout
+from io import BytesIO
+from django.core.files import File
 
 # import model(s) from LearningAPI app
 from LearningAPI.models import Instructor, Student, CohortType
 from .models import StudentDisengagement, ReasonCode, DisengagementType, StudentNote
 from .forms import StudentDisengagementForm, StudentNoteForm
+from .helpers import generate_pdf, send_pdf_email
 
 # auth
 def auth(request):
@@ -84,14 +87,13 @@ def studentDisengagementEditView(request, pk):
 
 @login_required
 def studentDisengagementPDFView(request, pk):
-    # disengagement = get_object_or_404(StudentDisengagement, pk=pk)
-    # template = "student_disengagement/studentdisengagement_sig.html"
+    disengagement = get_object_or_404(StudentDisengagement, pk=pk)
+    template = "student_disengagement/studentdisengagement_sig.html"
 
-    # pdf = generate_pdf(template, disengagement)
-    # if pdf:
-    #     filename = f"student_disengagement_{disengagement.student.last_name}_{disengagement.id}.pdf"
-    #     disengagement.pdf.save(filename, File(BytesIO(pdf.content)))
-    #     send_pdf_email(filename, disengagement)
-    #     return redirect(reverse('student_disengagement:disengagement_list'))
-    # return HttpResponse("Not found")
-    pass
+    pdf = generate_pdf(template, disengagement)
+    if pdf:
+        filename = f"student_disengagement_{disengagement.student.last_name}_{disengagement.id}.pdf"
+        disengagement.pdf.save(filename, File(BytesIO(pdf.content)))
+        send_pdf_email(filename, disengagement)
+        return redirect(reverse('student_disengagement:disengagement_list'))
+    return HttpResponse("Not found")
