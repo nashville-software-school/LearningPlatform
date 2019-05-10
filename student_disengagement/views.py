@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404, get_list_or_404
+from django.http import HttpResponseRedirect
+from django.urls import reverse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_http_methods
@@ -58,4 +60,4 @@ def studentDisengagementFormView(request):
 @login_required
 def studentDisengagementListView(request):
     disengagements = get_list_or_404(StudentDisengagement)
-    return render(request, 'student_disengagement/student_disengagement_list.html', {"de": disengagments})
+    return render(request, 'student_disengagement/student_disengagement_list.html', {"de": disengagements})
