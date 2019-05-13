@@ -6,7 +6,6 @@ class ReasonCode(models.Model):
     '''
     Reason for Withdrawal
     '''
-
     thec_code = models.PositiveIntegerField()
     title = models.CharField(max_length=50)
 
@@ -17,21 +16,10 @@ class DisengagementType(models.Model):
     '''
     Withdrawal or Leave of Absence
     '''
-
     name = models.CharField(max_length=100)
 
     def __str__(self):
       return self.name
-
-class StudentNote(models.Model):
-    '''
-    A record of an instructor's concerns about a student
-    '''
-
-    note = models.TextField()
-    instructor = models.ForeignKey(Instructor, on_delete=models.SET_NULL, null=True)
-    student = models.ForeignKey(Student, on_delete=models.CASCADE)
-    # Add timestamp
 
 class StudentDisengagement(models.Model):
     disengagement_type = models.ForeignKey(DisengagementType, null=True, on_delete=models.SET_NULL)
@@ -53,3 +41,13 @@ class StudentDisengagement(models.Model):
 
     class Meta:
         unique_together = ["student", "effective_date"]
+
+
+class StudentNote(models.Model):
+    '''
+    A record of an instructor's concerns about a student
+    '''
+    note = models.TextField()
+    instructor = models.ForeignKey(Instructor, on_delete=models.SET_NULL, null=True)
+    student = models.ForeignKey(Student, on_delete=models.CASCADE)
+    date_added = models.DateTimeField(auto_now=False, auto_now_add=True)
