@@ -13,4 +13,5 @@ urlpatterns = [
     # path('disengagements/<int:pk>/signature', views.StudentDisengagementSignatureView, name='disengagement_signature'),
     path('disengagements/<int:pk>/pdf', views.studentDisengagementPDFView, name='disengagement_pdf'),
     path('note', views.studentNoteFormView, name='note_form'),
+    path('my_notes', views.studentNoteListView, name='note_list'),
 ]

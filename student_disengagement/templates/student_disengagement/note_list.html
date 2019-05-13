@@ -1,0 +1,48 @@
+{% extends 'student_disengagement/base.html' %}
+
+{% block content %}
+{% include './navbar.html' %}
+
+<h2>All my student notes</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Student</th>
+      <th scope="col">Cohort</th>
+      <th scope="col">Note Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for note in notes %}
+    <tr>
+      <td>{{note.student.first_name}} {{note.student.last_name}}</td>
+      <td>{{note.student.current_cohort}}</td>
+      <td>{{note.date_added|date:'n/j/y'}}</td>
+      <td>{{note.note|truncatechars:30}}</td>
+      <td>
+        <a class="btn btn-primary" role="button" data-toggle="modal" data-target="#note_modal{{note.id}}">full note text</a>
+        <!-- Modal content -->
+        <div class="modal fade" id="note_modal{{note.id}}" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">My note re: {{note.student.full_name}}, from {{note.date_added}}</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  {{note.note}}
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

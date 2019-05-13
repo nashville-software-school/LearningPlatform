@@ -106,7 +106,7 @@ def group_test(self):
     print("group", self.groups.all())
     return group in self.groups.all()
 
-# @user_passes_test(group_test)
+@user_passes_test(group_test)
 @require_http_methods(["GET", "POST"])
 def studentNoteFormView(request):
     if request.method == "POST":
@@ -116,8 +116,14 @@ def studentNoteFormView(request):
           if form.is_valid():
               form.save()
               # redirect to a new URL:
-              return HttpResponseRedirect(reverse('student_disengagement:disengagement_list'))
+              return HttpResponseRedirect(reverse('student_disengagement:note_list'))
 
     form = StudentNoteForm()
     form.fields['instructor'].initial = Instructor.objects.get(pk=request.user.id)
     return render(request, 'student_disengagement/note_form.html', {"form": form})
+
+@user_passes_test(group_test)
+def studentNoteListView(request):
+    notes = get_list_or_404(StudentNote.objects.order_by('student'), instructor=request.user.id)
+    print("notes", notes)
+    return render(request, 'student_disengagement/note_list.html', {"notes": notes})
