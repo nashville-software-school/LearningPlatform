@@ -16,11 +16,8 @@ class Student(CommonProps):
 
     @property
     def full_name(self):
-        try:
-          current_cohort = self.current_cohort
-        except AttributeError:
-          current_cohort = ''
+        current_cohort = self.current_cohort
         return f"{self.first_name} {self.last_name}{':'} {current_cohort}"
 
     class Meta:
-      ordering = ['student_number']
+        ordering = ['last_name']

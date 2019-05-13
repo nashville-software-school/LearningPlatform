@@ -6,12 +6,10 @@ class CommonProps(models.Model):
 
     @property
     def current_cohort(self):
-        try:
-          # Find the cohort with an end date after today. Chain .first() to pull out the instance object
-          cohort = self.cohort_set.filter(end_date__gt=datetime.datetime.now().date()).first()
-          print("CUREEEEEENT", cohort)
-        except model.DoesNotExist:
-          cohort = None
+        # Find the cohort with an end date after today. Chain .first() to pull out the instance object
+        cohort = self.cohort_set.filter(end_date__gt=datetime.datetime.now().date()).first()
+        if not cohort:
+          return "unassigned"
         return cohort.name
 
     def __str__(self):
