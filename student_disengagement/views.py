@@ -49,7 +49,7 @@ def index(request):
 # disengagement views
 @login_required
 @require_http_methods(["GET", "POST"])
-def studentDisengagementFormView(request, pk=None):
+def studentDisengagementFormView(request):
     if request.method == "POST":
         # create a form instance and populate it with data from the request:
         form = StudentDisengagementForm(request.POST)
@@ -100,8 +100,9 @@ def studentDisengagementPDFView(request, pk):
     return HttpResponse("Not found")
 
 # note views
-# test user must pass to get access to /note view
 def group_test(self):
+    """test user must pass to get access to /note view"""
+
     group =  Group.objects.get(name='instructors')
     print("group", self.groups.all())
     return group in self.groups.all()

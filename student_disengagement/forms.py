@@ -1,6 +1,7 @@
 from django import forms
 from django.forms import ModelForm
 from django.forms.widgets import SelectDateWidget
+from django.db.models import Q
 from bootstrap_datepicker_plus import DatePickerInput
 from .models import StudentDisengagement, ReasonCode, DisengagementType, StudentNote
 # import model(s) from nss_users_api app
@@ -26,6 +27,8 @@ class StudentDisengagementForm(ModelForm):
         super().__init__(*args, **kwargs)
         self.fields['student'].empty_label = 'Select student name'
         self.fields['student'].label = "Student name"
+        # select only students who have no related disengagement or have a disengagement that is a leave of absence -- because leave of absence students can still have a permanent disengagement created
+        self.fields['student'].queryset = Student.objects.filter(Q(disengaged_student__isnull=True) | Q(disengaged_student__disengagement_type=2))
         self.fields['instructor'].empty_label = 'Select instructor name'
         self.fields['instructor'].label = 'Instructor name'
 

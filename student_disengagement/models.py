@@ -27,7 +27,7 @@ class StudentDisengagement(models.Model):
     # THEC definitions
     reason = models.ForeignKey(ReasonCode, blank=True, null=True, on_delete=models.SET_NULL)
     # Is CASCADE the correct thing to do here?
-    student = models.ForeignKey(Student, on_delete=models.CASCADE)
+    student = models.ForeignKey(Student, on_delete=models.CASCADE, related_name="disengaged_student")
     created = models.DateTimeField(auto_now_add=True)
     effective_date = models.DateField(blank=True)
     last_attendance_date = models.DateField(blank=True)
