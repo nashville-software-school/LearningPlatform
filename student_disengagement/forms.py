@@ -39,9 +39,13 @@ class StudentNoteForm(ModelForm):
         model = StudentNote
         fields = '__all__'
 
-    def __init__(self, *args, **kwargs):
+    # user arg is passed in from the view when form is instantiated
+    def __init__(self, user, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        student_list = user.instructor.students.all().values_list('id', flat=True)
+        student_queryset = Student.objects.filter(id__in=student_list).distinct()
         self.fields['student'].empty_label = 'Select student name'
         self.fields['student'].label = "Student name"
+        self.fields['student'].queryset = student_queryset
         self.fields['instructor'].empty_label = 'Select instructor name'
         self.fields['instructor'].label = 'Instructor name'

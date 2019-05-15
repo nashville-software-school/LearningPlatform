@@ -1,0 +1,42 @@
+[
+  {
+    "model": "LearningAPI.instructorstudent",
+    "pk": 1,
+    "fields": {
+      "instructor": 5,
+      "student": 5
+    }
+  },
+  {
+    "model": "LearningAPI.instructorstudent",
+    "pk": 2,
+    "fields": {
+      "instructor": 5,
+      "student": 2
+    }
+  },
+  {
+    "model": "LearningAPI.instructorstudent",
+    "pk": 3,
+    "fields": {
+      "instructor": 5,
+      "student": 3
+    }
+  },
+  {
+    "model": "LearningAPI.instructorstudent",
+    "pk": 4,
+    "fields": {
+      "instructor": 3,
+      "student": 4
+    }
+  },
+  {
+    "model": "LearningAPI.instructorstudent",
+    "pk": 5,
+    "fields": {
+      "instructor": 2,
+      "student": 3
+    }
+  }
+]

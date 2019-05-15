@@ -19,6 +19,7 @@ from .application_stage import ApplicationStage
 from .student import Student
 from .instructor import Instructor
 from .instructor_cohort import InstructorCohort
+from .instructor_student import InstructorStudent
 from .student_cohort import StudentCohort
 from .cohort import Cohort
 from .cohort_type import CohortType

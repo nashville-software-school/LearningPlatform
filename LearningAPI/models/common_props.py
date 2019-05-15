@@ -6,11 +6,11 @@ class CommonProps(models.Model):
 
     @property
     def current_cohort(self):
-        # Find the cohort with an end date after today. Chain .first() to pull out the instance object
-        cohort = self.cohort_set.filter(end_date__gt=datetime.datetime.now().date()).first()
+        # Find the cohort with an end date after today. Chain .last() to pull out the instance object that represents the date that's farthest away.
+        cohort = self.cohort_set.filter(end_date__gt=datetime.datetime.now().date()).order_by('end_date').last()
         if not cohort:
-          return "unassigned"
-        return cohort.name
+          return None
+        return cohort
 
     def __str__(self):
         return self.full_name

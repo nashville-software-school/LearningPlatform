@@ -104,7 +104,6 @@ def group_test(self):
     """test user must pass to get access to /note view"""
 
     group =  Group.objects.get(name='instructors')
-    print("group", self.groups.all())
     return group in self.groups.all()
 
 @user_passes_test(group_test)
@@ -119,12 +118,11 @@ def studentNoteFormView(request):
               # redirect to a new URL:
               return HttpResponseRedirect(reverse('student_disengagement:note_list'))
 
-    form = StudentNoteForm()
+    form = StudentNoteForm(request.user)
     form.fields['instructor'].initial = Instructor.objects.get(pk=request.user.id)
     return render(request, 'student_disengagement/note_form.html', {"form": form})
 
 @user_passes_test(group_test)
 def studentNoteListView(request):
     notes = get_list_or_404(StudentNote.objects.order_by('student'), instructor=request.user.id)
-    print("notes", notes)
     return render(request, 'student_disengagement/note_list.html', {"notes": notes})

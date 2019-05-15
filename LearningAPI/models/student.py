@@ -16,7 +16,7 @@ class Student(CommonProps):
 
     @property
     def full_name(self):
-        current_cohort = self.current_cohort
+        current_cohort = getattr(self.current_cohort, "name", "unassigned")
         return f"{self.first_name} {self.last_name}{':'} {current_cohort}"
 
     class Meta:
