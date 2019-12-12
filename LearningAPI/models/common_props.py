@@ -6,8 +6,9 @@ class CommonProps(models.Model):
 
     @property
     def current_cohort(self):
-        # Find the cohort with an end date after today. Chain .last() to pull out the instance object that represents the date that's farthest away.
-        cohort = self.cohort_set.filter(end_date__gt=datetime.datetime.now().date()).order_by('end_date').last()
+        # Find the student's cohort with the most recent timestamp. Chain .last() to pull out the instance object that represents the date that's farthest away.
+        cohort = self.cohorts.all().order_by('date_assigned').last().cohort
+        print("cohort?", cohort)
         if not cohort:
           return None
         return cohort

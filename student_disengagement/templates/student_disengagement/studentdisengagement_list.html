@@ -9,6 +9,7 @@
       <tr>
         <th scope="col">#</th>
         <th scope="col">Student</th>
+        <th scope="col">Cohort</th>
         <th scope="col">Eff. Date</th>
         <th scope="col">Ret. Date</th>
       </tr>
@@ -18,6 +19,7 @@
       <tr>
         <th scope="row">{{de.id}}</th>
         <td>{{de.student.full_name}}</td>
+        <td>{{de.student.cohort}}</td>
         <td>{{de.effective_date}}</td>
         <td>{{de.intended_return_date}}</td>
         <td><a class="btn btn-primary" role="button" href="{% url 'student_disengagement:disengagement' pk=de.id %}">details</a></td>

@@ -16,8 +16,11 @@ class Student(CommonProps):
 
     @property
     def full_name(self):
-        current_cohort = getattr(self.current_cohort, "name", "unassigned")
-        return f"{self.first_name} {self.last_name}{':'} {current_cohort}"
+        return f"{self.first_name} {self.last_name}"
+
+    @property
+    def cohort(self):
+        return getattr(self.current_cohort, "name", "unassigned")
 
     class Meta:
         ordering = ['last_name']

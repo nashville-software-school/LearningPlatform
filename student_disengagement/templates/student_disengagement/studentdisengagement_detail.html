@@ -7,7 +7,7 @@
 <div class="row">
   <div class="col-12">
     <a class="btn btn-primary" role="button" href="{% url 'student_disengagement:disengagement_edit' pk=de.id %}">edit details</a>
-    {% comment Don't allow formatting for student signature if student is deceased %}{% endcomment %}
+    {% comment Do not allow formatting for student signature if student is deceased %}{% endcomment %}
     {% if de.reason.id != 4 %}
       <a class="btn btn-primary" role="button" data-toggle="modal" data-target="#signature_modal">format for signatures</a>
     {% endif %}
