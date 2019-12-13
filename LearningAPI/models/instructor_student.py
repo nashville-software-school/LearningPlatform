@@ -5,4 +5,4 @@ class InstructorStudent(models.Model):
     """Represents relationship between and Instructor and Student"""
 
     instructor = models.ForeignKey("Instructor", on_delete=models.DO_NOTHING)
-    student = models.ForeignKey("Student", on_delete=models.DO_NOTHING)
+    student = models.ForeignKey("Student", on_delete=models.DO_NOTHING, related_name="instructor")

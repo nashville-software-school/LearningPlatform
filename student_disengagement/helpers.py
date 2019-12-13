@@ -28,7 +28,6 @@ def generate_pdf(template_src, instance):
     return None
 
 def send_pdf_email(pdf, data):
-  print("something's happening")
   draft_email = EmailMessage(
             'Student disengagement document ready for signatures', #subject
             f'An agreement for the withdrawal of {data.student.full_name} has been created, and is ready to be signed by the student and the instructor, {data.instructor.full_name}', #body

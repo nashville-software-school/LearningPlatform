@@ -8,12 +8,12 @@
 <div class="row justify-content-center">
   <div class="col-8">
     <h1 class="mt-2">Student Note</h1>
-    <form method="post" id="note-form" data-students-url="/engagement/ajax/load-students">
+    <form method="post" id="note_form" data-students-url="/engagement/load-students/note">
       {% csrf_token %}
       {{ form|crispy }}
       <button type="submit" class="btn btn-success">Save</button>
     </form>
   </div>
 </div>
-<script src="{% static 'student_disengagement/js/note_form.js' %}"></script>
+<script type="module" src="{% static 'student_disengagement/js/note_form.js' %}"></script>
 {% endblock %}

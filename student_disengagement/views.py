@@ -127,10 +127,23 @@ def studentNoteListView(request):
     notes = get_list_or_404(StudentNote.objects.order_by('student'), instructor=request.user.id)
     return render(request, 'student_disengagement/note_list.html', {"notes": notes})
 
+
+def load_disengagement_students(request, instructor_id):
+  pass
+
+def load_note_students(request, instructor_id):
+  pass
+
 # based on: https://simpleisbetterthancomplex.com/tutorial/2018/01/29/how-to-implement-dependent-or-chained-dropdown-list-with-django.html
-def load_students(request, instructor_id):
+def load_students(request, form_type, instructor_id):
     """student note view helper: dynamically loading new Student list when Instructor is changed in form"""
+
+    # values_list returns a QuerySet that returns list of tuples, rather than model instances
+    # flat=True will remove the tuples and return the list
     student_list = Instructor.objects.get(pk=instructor_id).students.all().values_list('id', flat=True)
     students = Student.objects.filter(id__in=student_list).distinct()
 
     return render(request, 'student_disengagement/student_dropdown_list_options.html', {'students': students})
+
+# if using this view to load students for a disengagement, select only students who have no related disengagement or have a disengagement that is a leave of absence -- because leave of absence students can still have a permanent disengagement created
+    # students = Student.objects.filter(Q(disengaged_student__isnull=True) | Q(disengaged_student__disengagement_type=2))

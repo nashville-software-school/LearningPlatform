@@ -14,6 +14,6 @@ urlpatterns = [
     path('disengagements/<int:pk>/pdf', views.studentDisengagementPDFView, name='disengagement_pdf'),
     path('note', views.studentNoteFormView, name='note_form'),
     # for dynamic loading of updated student list into note_form
-    path('ajax/load-students/<int:instructor_id>', views.load_students, name='ajax_load_students'),
+    path('load-students/<str:form_type>/<int:instructor_id>', views.load_students, name='ajax_load_students'),
     path('my_notes', views.studentNoteListView, name='note_list'),
 ]
